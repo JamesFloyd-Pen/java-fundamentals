@@ -4,7 +4,9 @@ public class exampleBook {
 
     public static void main(String[] args) {
         int example = 25;
+        String example2 = "abbbaabcddefffg";
         System.out.println(pairSumSequence(example));
+        countChange(example2);
 
     }
 
@@ -29,6 +31,16 @@ public class exampleBook {
 
     public static int pairSum(int a, int b){
         return a + b;
+    }
+
+    private static void countChange(String str){
+        int count = 0;
+        for(int i = 0; i < str.length() - 1; i++){
+            if(str.charAt(i) == str.charAt(i + 1)){
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 
 }
